@@ -1,25 +1,20 @@
 {
-  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "description": "Shared by every accessware crate. A repository's renovate.json extends this with github>accessware/.github.",
-  "extends": [
-    "config:recommended"
-  ],
-  "schedule": ["before 6am"],
-  "lockFileMaintenance": {
-    "enabled": true,
-    "schedule": ["before 6am"]
-  },
-  "packageRules": [
-    {
-      "matchManagers": ["cargo"],
-      "groupName": "cargo dependencies",
-      "rangeStrategy": "bump"
-    },
-    {
-      "description": "Everything the workflows pin (actions and the Rust toolchain) in one PR, majors included, since the PR's own CI exercises all of it.",
-      "matchFileNames": [".github/workflows/**"],
-      "groupName": "github actions",
-      "separateMajorMinor": false
-    }
-  ]
+	"$schema": "https://docs.renovatebot.com/renovate-schema.json",
+	"description": "Shared by every accessware crate, which extends it with github>accessware/.github. Everything comes in one PR a week, since the nightly pinned for rustfmt changes every day and only has to follow Paperback's, which moves on Mondays. Renovate merges a PR itself once every check on it has passed, rather than through GitHub's auto-merge, which with no required checks could merge before CI ran.",
+	"extends": ["config:recommended", "group:all"],
+	"schedule": ["before 6am on monday"],
+	"automerge": true,
+	"platformAutomerge": false,
+	"lockFileMaintenance": {
+		"description": "Renovate never groups lock file maintenance with other updates, so it comes as its own PR, on the same day.",
+		"enabled": true,
+		"schedule": ["before 6am on monday"]
+	},
+	"packageRules": [
+		{
+			"description": "Raise the requirement in Cargo.toml too, so a crate asks for the version it's tested with.",
+			"matchManagers": ["cargo"],
+			"rangeStrategy": "bump"
+		}
+	]
 }
