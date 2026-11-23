@@ -1,25 +1,17 @@
 # Accessware
 
-Accessible desktop software, and the Rust crates it's built from. [Paperback](https://github.com/trypsynth/paperback) and [Fedra](https://github.com/trypsynth/fedra) use them.
+Accessible desktop software in Rust, and the libraries it's built from.
 
-## wxDragon
+## Apps
 
-- [wx-utils](https://github.com/accessware/wx-utils): helpers for cross-platform wxDragon apps.
-- [live-region](https://github.com/accessware/live-region): screen reader announcements.
-- [quiet-list](https://github.com/accessware/quiet-list): a list of any length whose rows can change without the screen reader reading them again.
-- [key-chord](https://github.com/accessware/key-chord): keyboard shortcuts you can store in a config file and match at runtime.
-- [ship-shape](https://github.com/accessware/ship-shape): an auto-updater.
+- [Paperback](https://github.com/trypsynth/paperback): a light, cross-platform ebook and document reader.
+- [Fedra](https://github.com/trypsynth/fedra): a fast Mastodon client.
+- [Headroom](https://github.com/accessware/headroom): battery levels for SteelSeries Arctis Nova headsets, from a window or a hotkey, without SteelSeries GG.
 
-## Desktop apps
+## Libraries
 
-- [homeport](https://github.com/accessware/homeport): finds an app's config and resource folders, for portable copies, installs, macOS app bundles and AppImages.
-- [logkeeper](https://github.com/accessware/logkeeper): file logging that records panics.
-- [patois](https://github.com/accessware/patois): gettext translation for Rust, Swift and Kotlin.
-- [shipfitter](https://github.com/accessware/shipfitter): builds docs, installers, app bundles and archives.
-
-## Speech and text
-
-- [prismer](https://github.com/accessware/prismer): speech and screen reader output through [prism](https://github.com/ethindp/prism).
-- [native-ocr](https://github.com/accessware/native-ocr): text recognition with the OCR engine the operating system provides.
-- [libchm](https://github.com/accessware/libchm): reads CHM help files.
-- [libhlp](https://github.com/accessware/libhlp): reads WinHelp files.
+- wxDragon: [wx-utils](https://github.com/accessware/wx-utils) (dialogs, progress windows, and global hotkeys), [quiet-list](https://github.com/accessware/quiet-list) (lists whose rows can change without being read out again), [wordsmith](https://github.com/accessware/wordsmith) (typing help for text boxes), and [key-chord](https://github.com/accessware/key-chord) (keyboard shortcuts).
+- Speech: [prismer](https://github.com/accessware/prismer) (speech and screen reader output through [prism](https://github.com/ethindp/prism)) and [live-region](https://github.com/accessware/live-region) (screen reader announcements in wxDragon apps).
+- Packaging and updates: [shipfitter](https://github.com/accessware/shipfitter) (docs, installers, app bundles, and archives), [ship-shape](https://github.com/accessware/ship-shape) (auto-updates), and [mailbag](https://github.com/accessware/mailbag) (problem reports, emailed to the developer).
+- App plumbing: [homeport](https://github.com/accessware/homeport) (config and resource folders), [logkeeper](https://github.com/accessware/logkeeper) (file logging), [doorbell](https://github.com/accessware/doorbell) (one running copy at a time), and [patois](https://github.com/accessware/patois) (translation).
+- Documents and text: [libchm](https://github.com/accessware/libchm) (CHM), [libhlp](https://github.com/accessware/libhlp) (WinHelp), and [libinf](https://github.com/accessware/libinf) (OS/2 help) readers, and [native-ocr](https://github.com/accessware/native-ocr) (text recognition with the OS's own OCR).
