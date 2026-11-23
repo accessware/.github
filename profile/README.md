@@ -6,6 +6,7 @@ Accessible desktop software in Rust, and the libraries it's built from.
 
 - [Paperback](https://github.com/trypsynth/paperback): a light, cross-platform ebook and document reader.
 - [Fedra](https://github.com/trypsynth/fedra): a fast Mastodon client.
+- [Gitview](https://github.com/accessware/gitview): a cross-platform GitHub client.
 - [Headroom](https://github.com/accessware/headroom): battery levels for SteelSeries Arctis Nova headsets, from a window or a hotkey, without SteelSeries GG.
 
 ## Libraries
