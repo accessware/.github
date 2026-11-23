@@ -6,9 +6,9 @@
 	"automerge": true,
 	"platformAutomerge": false,
 	"lockFileMaintenance": {
-		"description": "Renovate never groups lock file maintenance with other updates, so it comes as its own PR, on the same day.",
+		"description": "Renovate never groups lock file maintenance with other updates, so it comes as its own PR, a day later. By then Monday's PR has usually merged, so the two aren't both open and editing Cargo.lock, where whichever merged second would conflict.",
 		"enabled": true,
-		"schedule": ["before 6am on monday"]
+		"schedule": ["before 6am on tuesday"]
 	},
 	"packageRules": [
 		{
